@@ -36,7 +36,7 @@ The `/app/list.php` component fails to sanitize user-controllable input fields (
 ### **Proof of Concept (PoC)**
 **Steps to Reproduce:**  
 
-1. 需要先注册一个用户，然后登入到系统。
+1. First, register a user account and log into the system.
 
 ![image-20250313235009389](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250313235009389.png?x-oss-process=style/img-to-webp)
 
@@ -52,11 +52,11 @@ The `/app/list.php` component fails to sanitize user-controllable input fields (
 
 4. The payload is stored in the database.  
 
-5. When an administrator or user views the affected data (/app/list.php), the script executes.  然后获取到管理员的PHPSESSID.
+5. When an administrator or user views the affected data (/app/list.php), the script executes.  Then, obtain the administrator's PHPSESSID.
 
 ![image-20250314000638889](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250314000638889.png?x-oss-process=style/img-to-webp)
 
-6. 使用管理员的PHPSESSID登陆系统。
+6. Log into the system using the administrator's PHPSESSID.
 
 ![image-20250314001022390](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250314001022390.png?x-oss-process=style/img-to-webp)
 
