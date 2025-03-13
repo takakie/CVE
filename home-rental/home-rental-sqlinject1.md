@@ -82,6 +82,8 @@ sqlmap -r newrent_sql.txt --dbms=mysql --dbs --batch
 
 ![image-20250313101447955](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250313101447955.png?x-oss-process=style/img-to-webp)
 
+![image-20250313193520322](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250313193520322.png?x-oss-process=style/img-to-webp)
+
 - "Due to the system using $keyword = explode(',', $keywords); for parameter processing, commas (,) cannot be utilized. Therefore, I developed the following Proof of Concept (PoC):" 
 - boolean-based blind
 
