@@ -143,7 +143,7 @@ keywords=india');INSERT INTO users SELECT * FROM (SELECT 3)a CROSS JOIN (SELECT 
 
 ![image-20250313111731407](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250313111731407.png?x-oss-process=style/img-to-webp)
 
-![image-20250313112300781](./image-20250313112300781.png)
+![image-20250313112300781](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250313112300781.png?x-oss-process=style/img-to-webp)
 
 ![image-20250313112051653](https://hongkong-img.oss-cn-hongkong.aliyuncs.com/markdown-img/image-20250313112051653.png?x-oss-process=style/img-to-webp)
 
